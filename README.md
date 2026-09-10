@@ -1,1 +1,239 @@
-# grafik-padi
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grafik Hasil Panen Padi Indonesia</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    padding: 20px;
+}
+
+.card {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.4);
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+/* GRAFIK */
+.chart {
+    height: 420px;
+    border-left: 3px solid #94a3b8;
+    border-bottom: 3px solid #94a3b8;
+
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+
+    padding: 20px;
+}
+
+.item {
+    flex: 1;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.value {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.bar {
+    width: 70%;
+    background: linear-gradient(
+        to top,
+        #2563eb,
+        #38bdf8
+    );
+
+    border-radius: 12px 12px 0 0;
+
+    transition: .3s;
+}
+
+.bar:hover {
+    transform: scaleY(1.05);
+    filter: brightness(1.2);
+}
+
+.label {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.info {
+    margin-top: 25px;
+    padding: 20px;
+
+    background: #0f172a;
+    border-radius: 15px;
+
+    line-height: 1.7;
+}
+
+.source {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* HP */
+@media(max-width:600px) {
+
+    .card {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .chart {
+        height: 350px;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .value {
+        font-size: 16px;
+    }
+
+    .label {
+        font-size: 11px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>
+📊 Tingkat Pertumbuhan Hasil Panen Padi Indonesia
+</h1>
+
+<div class="subtitle">
+Periode 1967–1997
+</div>
+
+<div class="chart">
+
+    <!-- 1967–1977 -->
+    <div class="item">
+
+        <div class="value">
+            4,91%
+        </div>
+
+        <div
+            class="bar"
+            style="height:294px">
+        </div>
+
+        <div class="label">
+            1967–1977
+        </div>
+
+    </div>
+
+
+    <!-- 1977–1987 -->
+    <div class="item">
+
+        <div class="value">
+            4,32%
+        </div>
+
+        <div
+            class="bar"
+            style="height:259px">
+        </div>
+
+        <div class="label">
+            1977–1987
+        </div>
+
+    </div>
+
+
+    <!-- 1987–1997 -->
+    <div class="item">
+
+        <div class="value">
+            1,03%
+        </div>
+
+        <div
+            class="bar"
+            style="height:62px">
+        </div>
+
+        <div class="label">
+            1987–1997
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="info">
+
+<b>Kesimpulan:</b>
+
+Tingkat pertumbuhan hasil panen padi Indonesia
+mengalami penurunan.
+
+Pertumbuhan tertinggi terjadi pada periode
+<b>1967–1977 sebesar 4,91%</b>.
+
+Sedangkan pertumbuhan terendah terjadi pada
+periode <b>1987–1997 sebesar 1,03%</b>.
+
+</div>
+
+
+<div class="source">
+
+Sumber data: FAO, Tabel 10 —
+Hasil Panen dan Tingkat Pertumbuhan Hasil Panen
+di Negara-negara Terpilih, 1966–1997.
+
+</div>
+
+</div>
+
+</body>
+</html>
